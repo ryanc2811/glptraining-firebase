@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   auth,
   registerWithEmailAndPassword,
-  signInWithGoogle,
 } from "./firebase";
 import "./CreateEmployer.css";
 function CreateEmployer() {
