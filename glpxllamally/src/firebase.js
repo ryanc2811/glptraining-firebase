@@ -119,6 +119,22 @@ const sendPasswordReset = async (email) => {
 const logout = () => {
   signOut(auth);
 };
+
+const create_new_team=async(company,team_members,manager_types,team_requests )=>{
+ try {
+    
+    await addDoc(collection(db, "teams"), {
+      team_members,
+      manager_types,
+      team_requests,
+      company
+    });
+
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+}
 export {
   auth,
   db,
@@ -127,4 +143,5 @@ export {
   registerWithEmailAndPassword,
   sendPasswordReset,
   logout,
+  create_new_team
 };
