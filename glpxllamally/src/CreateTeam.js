@@ -13,9 +13,10 @@ function CreateTeam() {
   team_members.push(admin);
   const manager_types=[];
   const team_requests=[];
-  const register_team = () => {
+  const register_team = async () => {
     if (!company) alert("Please enter company name");
-    create_new_team(company,team_members,manager_types,team_requests );
+    await create_new_team(company,team_members,manager_types,team_requests );
+    return navigate ("/dashboard");
   };
   useEffect(() => {
     if (loading) return;
@@ -25,12 +26,17 @@ function CreateTeam() {
   return (
     <div className="register">
       <div className="register__container">
+        <label for="company_name">
+            Company Name
+            
+        </label>
         <input
+        id="company_name"
           type="text"
           className="register__textBox"
           value={company}
           onChange={(e) => setCompany(e.target.value)}
-          placeholder="Full Name"
+          placeholder="Company Name"
         />
       
         <button className="register__btn" onClick={register_team}>

@@ -5,6 +5,7 @@ import Register from "./Register";
 import Reset from "./Reset";
 import Dashboard from "./Dashboard";
 import CreateTeam from "./CreateTeam";
+import MyTeams from "./MyTeams";
 function App() {
   return (
     <div className="app">
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/reset" element={<Reset />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/create_team" element={<CreateTeam/> }/>
+          <Route exact path="/my_teams" element={<MyTeams/> }/>
         </Routes>
       </Router>
     </div>

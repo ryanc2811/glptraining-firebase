@@ -23,10 +23,14 @@
     margin-bottom: 10px;
     border: none;
     color: white;
-    background-color: black;
+    background-color: #17c9ed;
   }
   .register__google {
-    background-color: #4285f4;
+    background-color: #ff61c2!important;
+  }
+  .register__google:hover{
+    background-color: #d953a6!important;
+    cursor: pointer;
   }
   .register div {
     margin-top: 7px;
